@@ -10,3 +10,24 @@ Stack trace:
 #2 C:\project\web\approval\vendor\laravel\lumen-framework\src\Console\Kernel.php(84): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 #3 C:\project\web\approval\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 #4 {main}  
+[2017-06-08 14:14:41] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\project\web\approval\routes\web.php:40
+Stack trace:
+#0 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(54): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main}  
+[2017-06-08 14:14:52] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in C:\project\web\approval\routes\web.php:40
+Stack trace:
+#0 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(54): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main}  
+[2017-06-08 14:16:35] lumen.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "make:controller" is not defined.
+
+Did you mean one of these?
+    make:migration
+    make:seeder' in C:\project\web\approval\vendor\symfony\console\Application.php:579
+Stack trace:
+#0 C:\project\web\approval\vendor\symfony\console\Application.php(204): Symfony\Component\Console\Application->find('make:controller')
+#1 C:\project\web\approval\vendor\symfony\console\Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\project\web\approval\vendor\laravel\lumen-framework\src\Console\Kernel.php(84): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\project\web\approval\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
