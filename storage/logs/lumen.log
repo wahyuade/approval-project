@@ -1,0 +1,12 @@
+[2017-06-08 13:47:31] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Memcached' not found' in C:\project\web\approval\vendor\illuminate\cache\MemcachedConnector.php:72
+Stack trace:
+#0 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(54): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main}  
+[2017-06-08 13:48:24] lumen.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "serve" is not defined.' in C:\project\web\approval\vendor\symfony\console\Application.php:579
+Stack trace:
+#0 C:\project\web\approval\vendor\symfony\console\Application.php(204): Symfony\Component\Console\Application->find('serve')
+#1 C:\project\web\approval\vendor\symfony\console\Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\project\web\approval\vendor\laravel\lumen-framework\src\Console\Kernel.php(84): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\project\web\approval\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
