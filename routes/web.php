@@ -11,10 +11,11 @@
 |
 */
 //public route
-$app->get('api/login', function () use ($app) {
-    return $app->version();
-});
+$app->post('api/login', 'LoginController@postLogin');
 
+$app->post('api/register', 'RegisterController@postDataRegister');
+
+$app->post('api/add/approval', 'ApprovalController@insertApproval');
 
 //private route
 $app->group(['middleware' => 'auth'], function () use ($app) {
@@ -30,8 +31,8 @@ $app->group(['middleware' => 'auth'], function () use ($app) {
         // Uses Auth Middleware
     });
 
-    $app->get('api/approve', function () {
-        // Uses Auth Middleware
+    $app->post('api/approve', function () {
+        return 'ok';
     });
 
     $app->get('api/reject', function () {

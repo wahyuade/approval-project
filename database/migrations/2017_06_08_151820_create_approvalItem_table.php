@@ -23,6 +23,7 @@ class CreateApprovalItemTable extends Migration
             $table->text('col_c');
             $table->text('col_d');
             $table->text('note');
+            $table->integer('status');
             $table->timestamps();
         });
     }

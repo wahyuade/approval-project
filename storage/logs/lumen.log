@@ -31,3 +31,172 @@ Stack trace:
 #2 C:\project\web\approval\vendor\laravel\lumen-framework\src\Console\Kernel.php(84): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 #3 C:\project\web\approval\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 #4 {main}  
+[2017-06-08 15:34:22] lumen.ERROR: exception 'RuntimeException' with message 'A facade root has not been set.' in C:\project\web\approval\vendor\illuminate\support\Facades\Facade.php:218
+Stack trace:
+#0 C:\project\web\approval\app\Http\Controllers\RegisterController.php(21): Illuminate\Support\Facades\Facade::__callStatic('encrypt', Array)
+#1 C:\project\web\approval\app\Http\Controllers\RegisterController.php(21): Illuminate\Support\Facades\Crypt::encrypt('123')
+#2 [internal function]: App\Http\Controllers\RegisterController->postDataRegister(Object(Illuminate\Http\Request))
+#3 C:\project\web\approval\vendor\illuminate\container\BoundMethod.php(30): call_user_func_array(Array, Array)
+#4 C:\project\web\approval\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#5 C:\project\web\approval\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#6 C:\project\web\approval\vendor\illuminate\container\Container.php(531): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#7 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(741): Illuminate\Container\Container->call(Array, Array)
+#8 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(708): Laravel\Lumen\Application->callControllerCallable(Array, Array)
+#9 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(681): Laravel\Lumen\Application->callLumenController(Object(App\Http\Controllers\RegisterController), 'postDataRegiste...', Array)
+#10 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(643): Laravel\Lumen\Application->callControllerAction(Array)
+#11 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(628): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#12 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(528): Laravel\Lumen\Application->handleFoundRoute(Array)
+#13 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(781): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#14 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(534): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#15 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(475): Laravel\Lumen\Application->dispatch(NULL)
+#16 C:\project\web\approval\public\index.php(28): Laravel\Lumen\Application->run()
+#17 {main}  
+[2017-06-09 01:55:38] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Auth\RequestGuard::attempt()' in C:\project\web\approval\vendor\illuminate\auth\AuthManager.php:294
+Stack trace:
+#0 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(54): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main}  
+[2017-06-09 01:56:43] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\Auth' not found' in C:\project\web\approval\app\Http\Controllers\LoginController.php:13
+Stack trace:
+#0 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(54): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main}  
+[2017-06-09 02:03:28] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined function App\Http\Controllers\loginProcess()' in C:\project\web\approval\app\Http\Controllers\LoginController.php:14
+Stack trace:
+#0 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(54): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main}  
+[2017-06-09 02:05:14] lumen.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\User' not found' in C:\project\web\approval\app\Http\Controllers\LoginController.php:18
+Stack trace:
+#0 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(54): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main}  
+[2017-06-09 02:06:37] lumen.ERROR: exception 'Illuminate\Contracts\Encryption\DecryptException' with message 'The payload is invalid.' in C:\project\web\approval\vendor\illuminate\encryption\Encrypter.php:180
+Stack trace:
+#0 C:\project\web\approval\vendor\illuminate\encryption\Encrypter.php(123): Illuminate\Encryption\Encrypter->getJsonPayload('123')
+#1 C:\project\web\approval\vendor\illuminate\support\Facades\Facade.php(221): Illuminate\Encryption\Encrypter->decrypt('123')
+#2 C:\project\web\approval\app\Http\Controllers\LoginController.php(21): Illuminate\Support\Facades\Facade::__callStatic('decrypt', Array)
+#3 C:\project\web\approval\app\Http\Controllers\LoginController.php(21): Illuminate\Support\Facades\Crypt::decrypt('123')
+#4 C:\project\web\approval\app\Http\Controllers\LoginController.php(15): App\Http\Controllers\LoginController->loginProcess('wahyu@app.com', '123')
+#5 [internal function]: App\Http\Controllers\LoginController->postLogin(Object(Illuminate\Http\Request))
+#6 C:\project\web\approval\vendor\illuminate\container\BoundMethod.php(30): call_user_func_array(Array, Array)
+#7 C:\project\web\approval\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#8 C:\project\web\approval\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#9 C:\project\web\approval\vendor\illuminate\container\Container.php(531): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#10 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(741): Illuminate\Container\Container->call(Array, Array)
+#11 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(708): Laravel\Lumen\Application->callControllerCallable(Array, Array)
+#12 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(681): Laravel\Lumen\Application->callLumenController(Object(App\Http\Controllers\LoginController), 'postLogin', Array)
+#13 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(643): Laravel\Lumen\Application->callControllerAction(Array)
+#14 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(628): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#15 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(528): Laravel\Lumen\Application->handleFoundRoute(Array)
+#16 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Illuminate\Http\Request))
+#17 C:\project\web\approval\vendor\laravel\lumen-framework\src\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#18 C:\project\web\approval\app\Http\Middleware\ExampleMiddleware.php(18): Laravel\Lumen\Routing\Pipeline->Laravel\Lumen\Routing\{closure}(Object(Illuminate\Http\Request))
+#19 C:\project\web\approval\vendor\illuminate\pipeline\Pipeline.php(148): App\Http\Middleware\ExampleMiddleware->handle(Object(Illuminate\Http\Request), Object(Closure))
+#20 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 C:\project\web\approval\vendor\laravel\lumen-framework\src\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#22 C:\project\web\approval\vendor\illuminate\pipeline\Pipeline.php(102): Laravel\Lumen\Routing\Pipeline->Laravel\Lumen\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(778): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#24 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(534): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#25 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(475): Laravel\Lumen\Application->dispatch(NULL)
+#26 C:\project\web\approval\public\index.php(28): Laravel\Lumen\Application->run()
+#27 {main}  
+[2017-06-09 02:07:28] lumen.ERROR: exception 'Illuminate\Contracts\Encryption\DecryptException' with message 'The payload is invalid.' in C:\project\web\approval\vendor\illuminate\encryption\Encrypter.php:180
+Stack trace:
+#0 C:\project\web\approval\vendor\illuminate\encryption\Encrypter.php(123): Illuminate\Encryption\Encrypter->getJsonPayload('123')
+#1 C:\project\web\approval\vendor\illuminate\encryption\Encrypter.php(149): Illuminate\Encryption\Encrypter->decrypt('123', false)
+#2 C:\project\web\approval\vendor\illuminate\support\Facades\Facade.php(221): Illuminate\Encryption\Encrypter->decryptString('123')
+#3 C:\project\web\approval\app\Http\Controllers\LoginController.php(21): Illuminate\Support\Facades\Facade::__callStatic('decryptString', Array)
+#4 C:\project\web\approval\app\Http\Controllers\LoginController.php(21): Illuminate\Support\Facades\Crypt::decryptString('123')
+#5 C:\project\web\approval\app\Http\Controllers\LoginController.php(15): App\Http\Controllers\LoginController->loginProcess('wahyu@app.com', '123')
+#6 [internal function]: App\Http\Controllers\LoginController->postLogin(Object(Illuminate\Http\Request))
+#7 C:\project\web\approval\vendor\illuminate\container\BoundMethod.php(30): call_user_func_array(Array, Array)
+#8 C:\project\web\approval\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#9 C:\project\web\approval\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#10 C:\project\web\approval\vendor\illuminate\container\Container.php(531): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#11 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(741): Illuminate\Container\Container->call(Array, Array)
+#12 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(708): Laravel\Lumen\Application->callControllerCallable(Array, Array)
+#13 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(681): Laravel\Lumen\Application->callLumenController(Object(App\Http\Controllers\LoginController), 'postLogin', Array)
+#14 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(643): Laravel\Lumen\Application->callControllerAction(Array)
+#15 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(628): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#16 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(528): Laravel\Lumen\Application->handleFoundRoute(Array)
+#17 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Illuminate\Http\Request))
+#18 C:\project\web\approval\vendor\laravel\lumen-framework\src\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#19 C:\project\web\approval\app\Http\Middleware\ExampleMiddleware.php(18): Laravel\Lumen\Routing\Pipeline->Laravel\Lumen\Routing\{closure}(Object(Illuminate\Http\Request))
+#20 C:\project\web\approval\vendor\illuminate\pipeline\Pipeline.php(148): App\Http\Middleware\ExampleMiddleware->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 C:\project\web\approval\vendor\laravel\lumen-framework\src\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#23 C:\project\web\approval\vendor\illuminate\pipeline\Pipeline.php(102): Laravel\Lumen\Routing\Pipeline->Laravel\Lumen\Routing\{closure}(Object(Illuminate\Http\Request))
+#24 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(778): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#25 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(534): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#26 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(475): Laravel\Lumen\Application->dispatch(NULL)
+#27 C:\project\web\approval\public\index.php(28): Laravel\Lumen\Application->run()
+#28 {main}  
+[2017-06-09 02:09:48] lumen.ERROR: exception 'Illuminate\Contracts\Encryption\DecryptException' with message 'The payload is invalid.' in C:\project\web\approval\vendor\illuminate\encryption\Encrypter.php:180
+Stack trace:
+#0 C:\project\web\approval\vendor\illuminate\encryption\Encrypter.php(123): Illuminate\Encryption\Encrypter->getJsonPayload('123')
+#1 C:\project\web\approval\vendor\illuminate\support\Facades\Facade.php(221): Illuminate\Encryption\Encrypter->decrypt('123')
+#2 C:\project\web\approval\app\Http\Controllers\LoginController.php(21): Illuminate\Support\Facades\Facade::__callStatic('decrypt', Array)
+#3 C:\project\web\approval\app\Http\Controllers\LoginController.php(21): Illuminate\Support\Facades\Crypt::decrypt('123')
+#4 C:\project\web\approval\app\Http\Controllers\LoginController.php(15): App\Http\Controllers\LoginController->loginProcess('wahyu@app.com', '123')
+#5 [internal function]: App\Http\Controllers\LoginController->postLogin(Object(Illuminate\Http\Request))
+#6 C:\project\web\approval\vendor\illuminate\container\BoundMethod.php(30): call_user_func_array(Array, Array)
+#7 C:\project\web\approval\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#8 C:\project\web\approval\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#9 C:\project\web\approval\vendor\illuminate\container\Container.php(531): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#10 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(741): Illuminate\Container\Container->call(Array, Array)
+#11 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(708): Laravel\Lumen\Application->callControllerCallable(Array, Array)
+#12 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(681): Laravel\Lumen\Application->callLumenController(Object(App\Http\Controllers\LoginController), 'postLogin', Array)
+#13 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(643): Laravel\Lumen\Application->callControllerAction(Array)
+#14 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(628): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#15 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(528): Laravel\Lumen\Application->handleFoundRoute(Array)
+#16 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Illuminate\Http\Request))
+#17 C:\project\web\approval\vendor\laravel\lumen-framework\src\Routing\Pipeline.php(52): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#18 C:\project\web\approval\app\Http\Middleware\ExampleMiddleware.php(18): Laravel\Lumen\Routing\Pipeline->Laravel\Lumen\Routing\{closure}(Object(Illuminate\Http\Request))
+#19 C:\project\web\approval\vendor\illuminate\pipeline\Pipeline.php(148): App\Http\Middleware\ExampleMiddleware->handle(Object(Illuminate\Http\Request), Object(Closure))
+#20 [internal function]: Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 C:\project\web\approval\vendor\laravel\lumen-framework\src\Routing\Pipeline.php(32): call_user_func(Object(Closure), Object(Illuminate\Http\Request))
+#22 C:\project\web\approval\vendor\illuminate\pipeline\Pipeline.php(102): Laravel\Lumen\Routing\Pipeline->Laravel\Lumen\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(778): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#24 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(534): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#25 C:\project\web\approval\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(475): Laravel\Lumen\Application->dispatch(NULL)
+#26 C:\project\web\approval\public\index.php(28): Laravel\Lumen\Application->run()
+#27 {main}  
+[2017-06-09 05:29:59] lumen.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "make:" is ambiguous.
+Did you mean one of these?
+    make:migration Create a new migration file
+    make:seeder    Create a new seeder class' in C:\project\web\approval\vendor\symfony\console\Application.php:607
+Stack trace:
+#0 C:\project\web\approval\vendor\symfony\console\Application.php(204): Symfony\Component\Console\Application->find('make:')
+#1 C:\project\web\approval\vendor\symfony\console\Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\project\web\approval\vendor\laravel\lumen-framework\src\Console\Kernel.php(84): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\project\web\approval\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2017-06-09 05:45:29] lumen.ERROR: exception 'Symfony\Component\Console\Exception\RuntimeException' with message 'The "-f" option does not exist.' in C:\project\web\approval\vendor\symfony\console\Input\ArgvInput.php:207
+Stack trace:
+#0 C:\project\web\approval\vendor\symfony\console\Input\ArgvInput.php(110): Symfony\Component\Console\Input\ArgvInput->addShortOption('f', NULL)
+#1 C:\project\web\approval\vendor\symfony\console\Input\ArgvInput.php(86): Symfony\Component\Console\Input\ArgvInput->parseShortOption('-f')
+#2 C:\project\web\approval\vendor\symfony\console\Input\Input.php(63): Symfony\Component\Console\Input\ArgvInput->parse()
+#3 C:\project\web\approval\vendor\symfony\console\Command\Command.php(222): Symfony\Component\Console\Input\Input->bind(Object(Symfony\Component\Console\Input\InputDefinition))
+#4 C:\project\web\approval\vendor\illuminate\console\Command.php(168): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#5 C:\project\web\approval\vendor\symfony\console\Application.php(869): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\project\web\approval\vendor\symfony\console\Application.php(223): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\project\web\approval\vendor\symfony\console\Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\project\web\approval\vendor\laravel\lumen-framework\src\Console\Kernel.php(84): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\project\web\approval\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 {main}  
+[2017-06-09 05:45:39] lumen.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "migrate:reload" is not defined.
+
+Did you mean one of these?
+    migrate
+    migrate:install
+    migrate:refresh
+    migrate:reset
+    migrate:rollback
+    migrate:status' in C:\project\web\approval\vendor\symfony\console\Application.php:579
+Stack trace:
+#0 C:\project\web\approval\vendor\symfony\console\Application.php(204): Symfony\Component\Console\Application->find('migrate:reload')
+#1 C:\project\web\approval\vendor\symfony\console\Application.php(130): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\project\web\approval\vendor\laravel\lumen-framework\src\Console\Kernel.php(84): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\project\web\approval\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
