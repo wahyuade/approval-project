@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Approvalitems extends Model
+class Approvalitem extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,6 +12,6 @@ class Approvalitems extends Model
      * @var array
      */
     protected $fillable = [
-        'name',
+        'id_approval', 'amount', 'keterangan', 'attachment', 'image', 'col_c', 'col_d', 'note', 'status',
     ];
 }

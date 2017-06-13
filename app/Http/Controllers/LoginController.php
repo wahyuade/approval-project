@@ -16,7 +16,7 @@ class LoginController extends Controller
         {   
             $remember_token = str_random(32);
             User::where('email', $email)->update(['remember_token'=>$remember_token]);
-            return response()->json(['success'=>true, 'message'=>'Success Login !', 'Api-Token'=>$remember_token]);
+            return response()->json(['success'=>true, 'message'=>'Success Login !', 'token'=>$remember_token]);
         }
         else
         {

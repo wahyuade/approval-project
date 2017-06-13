@@ -16,4 +16,11 @@ class ApprovalController extends Controller
 
         return response()->json(['success'=>true, 'message'=>'Success add Approval object']);
     }
+
+    public function listApproval()
+    {
+        $data_approval = Approval::get();
+
+        return $data_approval;
+    }
 }

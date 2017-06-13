@@ -17,25 +17,16 @@ $app->post('api/register', 'RegisterController@postDataRegister');
 
 $app->post('api/add/approval', 'ApprovalController@insertApproval');
 
+$app->post('api/add/item', 'ApprovalitemController@insertDataApproval');
+
 //private route
 $app->group(['middleware' => 'auth'], function () use ($app) {
-	$app->get('api/list/object', function ()    {
-        // Uses Auth Middleware
-    });
+	$app->get('api/list/object', 'ApprovalController@listApproval');
 
-    $app->get('api/list/object/item', function () {
-        // Uses Auth Middleware
-    });
+    $app->get('api/list/object/item', 'ApprovalitemController@listItemApproval');
 
-    $app->get('api/detail', function () {
-        // Uses Auth Middleware
-    });
 
-    $app->post('api/approve', function () {
-        return 'ok';
-    });
+    $app->post('api/approve', 'ApprovalitemController@approve');
 
-    $app->get('api/reject', function () {
-        // Uses Auth Middleware
-    });
+    $app->post('api/reject', 'ApprovalitemController@reject');
 });
